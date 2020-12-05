@@ -19,6 +19,4 @@ app.post('', (resquest, response) => {
   return response.json({ reply: `Olá ${sender}, sua mensagem foi: ${message}` });
 });
 
-app.listen(3333, () => {
-  console.log('Server started!');
-});
+app.listen(3333);
