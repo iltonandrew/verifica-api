@@ -29,9 +29,16 @@ app.get('', (request, response) => {
 });
 
 app.post('', (resquest, response) => {
+  const verifica = 'QUESTIONÁVEL';
   const { sender, message } = resquest.body;
+  console.log(message);
 
-  return response.json({ reply: `Olá ${sender}, sua mensagem foi: ${message}` });
+  if (message.toLowerCase().includes('#verifica')) {
+    message.toLowerCase().includes('robo') ? (verifica = 'FAKE NEWS') : (verifica = 'VERDADE');
+    message = message.replace('#verifica', '');
+
+    return response.json({ reply: `Olá ${sender}, sua mensagem" ${message} " foi VERIFICADA e isso é ${verifica}` });
+  }
 });
 
 // Quando não encontra rota, entra aqui:
