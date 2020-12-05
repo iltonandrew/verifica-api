@@ -30,11 +30,10 @@ app.get('', (request, response) => {
 
 app.post('', (resquest, response) => {
   let verifica = 'QUESTIONÁVEL';
+  console.log(resquest.body);
   let { sender, message } = resquest.body;
-  console.log(message);
 
   if (message.toLowerCase().includes('#verifica')) {
-    console.log('here');
     message.toLowerCase().includes('robo') ? (verifica = 'FAKE NEWS') : (verifica = 'VERDADE');
     message = message.replace('#verifica', '');
     if (message != '') return response.json({ reply: `Olá ${sender}, sua mensagem '${message} ' foi VERIFICADA e isso é ${verifica}` });
