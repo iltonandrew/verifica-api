@@ -29,13 +29,14 @@ app.get('', (request, response) => {
 });
 
 app.post('', (resquest, response) => {
+  const keywords = ['#verifique', '#verifica'];
   let verifica = 'QUESTIONÁVEL';
   console.log(resquest.body);
   let { sender, message } = resquest.body;
 
-  if (message.toLowerCase().includes('#verifica')) {
+  if (message.toLowerCase().includes(keywords)) {
     message.toLowerCase().includes('robo') ? (verifica = 'FAKE NEWS') : (verifica = 'VERDADE');
-    message = message.replace('#verifica', '');
+    message = message.replace(keywords, '');
     if (message != '') return response.json({ reply: `Olá ${sender}, sua mensagem '${message} ' foi VERIFICADA e isso é ${verifica}` });
   }
   return response.status(200).send({});
