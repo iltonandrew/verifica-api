@@ -34,7 +34,7 @@ app.post('', (resquest, response) => {
   console.log(resquest.body);
   let { sender, message } = resquest.body;
 
-  if (message.toLowerCase().includes(keywords)) {
+  if (message.toLowerCase().includes(keywords[0]) || message.toLowerCase().includes(keywords[1])) {
     message.toLowerCase().includes('robo') ? (verifica = 'FAKE NEWS') : (verifica = 'VERDADE');
     message = message.replace(keywords, '');
     if (message != '') return response.json({ reply: `Olá ${sender}, sua mensagem '${message} ' foi VERIFICADA e isso é ${verifica}` });
