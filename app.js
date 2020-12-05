@@ -35,7 +35,7 @@ app.post('', (resquest, response) => {
   let { sender, message } = resquest.body;
 
   if (message.toLowerCase() == keywords[0] || message.toLowerCase() == keywords[1]) {
-    return response.json({ reply: 'Olá! Eu sou o Verifique! :white_check_mark:\n\nEstou aqui para ajudar você a saber se uma notícia é *VERDADE* :sparkles: ou *FAKE NEWS* :bomb:\n\n E aí, bora espalhar apenas notícias *VERIFICADAS*? :green_heart::green_heart::green_heart:' });
+    return response.json({ reply: 'Olá! Eu sou o Verifique! ✅\n\nEstou aqui para ajudar você a saber se uma notícia é *VERDADE* ✨ ou *FAKE NEWS* 💣\n\nE aí, bora espalhar apenas notícias *VERIFICADAS*? 💚💚💚' });
   }
 
   if (message.toLowerCase().includes(keywords[0]) || message.toLowerCase().includes(keywords[1])) {
