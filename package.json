@@ -1,0 +1,17 @@
+{
+  "name": "verifica-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/iltonandrew/verifica-api.git",
+  "author": "Ilton Andrew <iltonandrew@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "node index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
