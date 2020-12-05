@@ -37,9 +37,9 @@ app.post('', (resquest, response) => {
     console.log('here');
     message.toLowerCase().includes('robo') ? (verifica = 'FAKE NEWS') : (verifica = 'VERDADE');
     message = message.replace('#verifica', '');
-
-    return response.json({ reply: `Olá ${sender}, sua mensagem '${message} ' foi VERIFICADA e isso é ${verifica}` });
+    if (message != '') return response.json({ reply: `Olá ${sender}, sua mensagem '${message} ' foi VERIFICADA e isso é ${verifica}` });
   }
+  return response.status(200).send({});
 });
 
 // Quando não encontra rota, entra aqui:
