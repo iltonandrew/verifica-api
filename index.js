@@ -1,17 +1,13 @@
 import express from 'express';
 import cors from 'cors';
+import bodyParser from 'body-parser';
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-var bodyParser = require('body-parser');
-
-// create application/json parser
-var jsonParser = bodyParser.json();
-
-// create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.get('', (request, response) => {
   return response.json('Salve');
