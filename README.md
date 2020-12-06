@@ -1,11 +1,27 @@
-# Bem Vindo
+# Verifica-API
 
-## Agradecimentos
+![alt text](https://github.com/iltonandrew/verifica-api/blob/main/logo%20verifique.png?raw=true 'Logo Verifique')
 
-Gostaria de te agradecer por chegar até aqui. Espero que você possa adquirir um bom conhecimento e compartilhar com outros.
+# Autores:
 
-Este trabalho é o resultado de uma série de vídeo aulas **gratuitas** que tenho disponibilizadas no meu canal do youtube.
+**Gabriel Paganini**
 
-Já que está aqui, aproveite e se inscreva, e apoie este trabalho que eu faço com tanto zelo.
+**Ilton Andrew**
 
-[CLIQUE AQUI PARA VISITAR A PLAYLIST](https://www.youtube.com/watch?v=hAAj27hgPFg&list=PLWgD0gfm500EMEDPyb3Orb28i7HK5_DkR&index=2&t=0s)
+**Marina Mesquita**
+
+**Victor Ye**
+
+# Visagio Hackathon
+
+API construida durante o **Visagio Hackathon** para um ChatBot de Whatsapp com o propósito de verificar a probabilidade de uma resposta ser verdadeira, bem como recomendar assuntos correlatos ao tema **verificado**
+
+# Funcionamento
+
+[A API encontra-se disponível no Heroku e pode ser consultada aqui](https://verifica-api.herokuapp.com/)
+
+# Agradecimentos
+
+Gostaria de agradecer e reconhecer o trabalho de
+[Fernando Silva Maransatto](https://github.com/Maransattos)
+por fornecer a estrutura base dessa API, que pode ser encontrada [aqui.](https://github.com/Maransatto/rest-api-node-js)
