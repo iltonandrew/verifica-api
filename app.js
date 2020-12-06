@@ -39,7 +39,7 @@ app.post('', async (resquest, response) => {
   function assembleReply(message) {
     const coronaSources = '\n\nPara se informar mais, entre nesses sites:\nhttps://covid.saude.gov.br/\nhttps://g1.globo.com/bemestar/coronavirus/\nhttps://search.folha.uol.com.br/?q=coronavirus';
     const accuracy = Math.floor(Math.random() * 100);
-    const messageLabel = Math.floor(Math.random() * 100) > 75 ? '*PROVAVELMENTE VERDADEIRA!* ✅' : Math.floor(Math.random() * 100) > 45 ? '*QUESTIONÁVEL!* 🤔' : '*PROVAVELMENTE FAKE NEWS!* 💣';
+    const messageLabel = accuracy > 75 ? '*PROVAVELMENTE VERDADEIRA!* ✅' : accuracy > 45 ? '*QUESTIONÁVEL!* 🤔' : '*PROVAVELMENTE FAKE NEWS!* 💣';
     const resposta = message.toLowerCase().includes('corona') || message.toLowerCase().includes('covid') ? `Olá! Acabei de verificar sua mensagem! De acordo com nossas bases de dados, ela possui a chance de ser *${accuracy}% VERDADE*, portanto, essa notícia é ${messageLabel}${coronaSources}` : 'Não fala sobre corona';
     return resposta;
   }
