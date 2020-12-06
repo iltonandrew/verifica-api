@@ -52,7 +52,7 @@ app.post('', async (resquest, response) => {
   if (helloKeyword) {
     return response.json({
       reply:
-        'Olá! Eu sou a Vera do Verifique! ✅\n\nEstou aqui para ajudar você a saber se uma notícia é *VERDADE* ✨ ou *FAKE NEWS* 💣\n\nAqui vão algum das minhas funcionalidades:\n#verifica _<mensagem>_, verifica a veracidade de alguma informação, e também sugere alguns locais onde você pode se informar mais sobre o assunto! 💡\n#noticias Retorna as principais notícias do dia! 📰 \n\nE aí, bora espalhar apenas notícias *VERIFICADAS*? 💚💚💚',
+        'Olá! Eu sou a Vera do Verifique!  ✅\n\nEstou aqui para ajudar você a saber se uma notícia é *VERDADE* ✨ ou *FAKE NEWS* 💣\n\nAqui vão algum das minhas funcionalidades:\n\n*#verifica* _<mensagem>_, verifica a veracidade de alguma informação, e também sugere alguns locais onde você pode se informar mais sobre o assunto! 💡\n\n*#noticias* Retorna as principais notícias do dia! 📰 \n\nE aí, bora espalhar apenas notícias *VERIFICADAS*? 💚💚💚',
     });
   }
 
