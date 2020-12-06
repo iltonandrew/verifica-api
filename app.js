@@ -41,7 +41,7 @@ app.post('', async (resquest, response) => {
     const accuracy = Math.floor(Math.random() * 100);
     const messageLabel = accuracy > 75 ? '*PROVAVELMENTE VERDADEIRA!* ✅' : accuracy > 45 ? '*QUESTIONÁVEL!* 🤔' : '*PROVAVELMENTE FAKE NEWS!* 💣';
     const resposta =
-      message.toLowerCase().includes('corona') || message.toLowerCase().includes('covid') ? `Olá! Acabei de verificar sua mensagem "${message} "! De acordo com nossas bases de dados, ela possui a chance de ser *${accuracy}% VERDADE*, portanto, essa notícia é ${messageLabel}${coronaSources}` : 'Não fala sobre corona';
+      message.toLowerCase().includes('corona') || message.toLowerCase().includes('covid') ? `Olá! Acabei de verificar sua mensagem "${message}"! De acordo com nossas bases de dados, ela possui a chance de ser *${accuracy}% VERDADE*, portanto, essa notícia é ${messageLabel}${coronaSources}` : 'Não fala sobre corona';
     return resposta;
   }
   // const verificador = google.factchecktools({
@@ -66,8 +66,8 @@ app.post('', async (resquest, response) => {
 
   if (hasKeyword) {
     message.toLowerCase().includes('robo') ? (verifica = '*FAKE NEWS*') : (verifica = '*VERDADE*');
-    message = message.replace(keywords[0], '');
-    message = message.replace(keywords[1], '');
+    message = message.replace(`${keywords[0]} `, '');
+    message = message.replace(`${keywords[1]} `, '');
     if (message != '') return response.json({ reply: assembleReply(message) });
   }
   return response.status(200).send({});
