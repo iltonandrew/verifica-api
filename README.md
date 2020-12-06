@@ -1,6 +1,6 @@
 # Verifica-API
 
-![alt text](https://github.com/iltonandrew/verifica-api/blob/main/logo%20verifique.png?raw=true 'Logo Verifique')
+![img](https://github.com/iltonandrew/verifica-api/blob/main/logo%20verifique.png?raw=true 'Logo Verifique')
 
 # Autores:
 
@@ -19,6 +19,14 @@ API construida durante o **Visagio Hackathon** para um ChatBot de Whatsapp com o
 # Funcionamento
 
 [A API encontra-se disponível no Heroku e pode ser consultada aqui](https://verifica-api.herokuapp.com/)
+
+## Request Exemplo:
+
+![img](https://github.com/iltonandrew/verifica-api/blob/main/request.png?raw=true)
+
+## Exemplo de funcionamento:
+
+![img](https://github.com/iltonandrew/verifica-api/blob/main/screen.png?raw=true)
 
 # Agradecimentos
 
